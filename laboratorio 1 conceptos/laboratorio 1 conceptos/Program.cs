@@ -6,7 +6,25 @@ namespace laboratorio_1_conceptos
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int salida;
+
+            Console.WriteLine("ingrese su edad");
+            var edad = Console.ReadLine();
+            var result = int.TryParse(edad, out salida);
+
+            if (result == true)
+            {
+                
+                Console.WriteLine("Su edad es " + edad);
+                salida = int.Parse(edad);
+
+            }
+            else
+            {
+                Console.WriteLine("El valor se puede convertir");
+
+            }
+            Console.ReadKey();
         }
     }
 }
